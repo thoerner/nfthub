@@ -37,77 +37,79 @@ const SectionOne = () => {
       </div>
 
       {/* Right */}
-      <div className="flex space-x-4 translate-y-[-150px]">
-        <div className="flex flex-wrap justify-center items-center p-4">
-          {/* SVGs around NFT 1 */}
-          <Image
-            src={Circle01}
-            alt="Circle 1"
-            width={30}
-            height={30}
-            className="ml-auto"
-          />
-
-          {/* NFT 1 Image */}
-          <div className="relative w-60 h-60 z-10">
+      <div className="relative overflow-x-hidden">
+        <div className="flex space-x-4 translate-y-[-150px]">
+          <div className="flex flex-wrap justify-center items-center p-4">
+            {/* SVGs around NFT 1 */}
             <Image
-              src={Art01}
-              alt="NFT 1"
-              layout="fill"
-              objectFit="cover"
-              className="shadow-lg rounded-lg"
+              src={Circle01}
+              alt="Circle 1"
+              width={30}
+              height={30}
+              className="ml-auto"
+            />
+
+            {/* NFT 1 Image */}
+            <div className="relative w-60 h-60 z-10">
+              <Image
+                src={Art01}
+                alt="NFT 1"
+                layout="fill"
+                objectFit="cover"
+                className="shadow-lg rounded-lg"
+              />
+            </div>
+
+            <Image
+              src={Circle02}
+              alt="Circle 2"
+              width={30}
+              height={30}
+              className="mr-auto translate-y-[50px]"
+            />
+            <Image
+              src={Star02}
+              alt="Star 2"
+              width={55}
+              height={55}
+              className="mr-auto"
+            />
+            <Image
+              src={SquareRound}
+              alt="Square Round"
+              width={55}
+              height={55}
+              className="mt-auto translate-y-[100px] translate-x-[-50px]"
             />
           </div>
 
-          <Image
-            src={Circle02}
-            alt="Circle 2"
-            width={30}
-            height={30}
-            className="mr-auto translate-y-[50px]"
-          />
-          <Image
-            src={Star02}
-            alt="Star 2"
-            width={55}
-            height={55}
-            className="mr-auto"
-          />
-          <Image
-            src={SquareRound}
-            alt="Square Round"
-            width={55}
-            height={55}
-            className="mt-auto translate-y-[100px] translate-x-[-50px]"
-          />
-        </div>
-
-        <div className="flex flex-wrap justify-center items-center p-4">
-          {/* SVGs around NFT 2 */}
-          <Image
-            src={Star01}
-            alt="Star 1"
-            width={55}
-            height={55}
-            className="ml-auto translate-y-[150px] translate-x-[-75px]"
-          />
-          <Image
-            src={Star03}
-            alt="Star 3"
-            width={55}
-            height={55}
-            className="ml-auto translate-y-[50px] translate-x-[-100px]"
-          />
-
-          {/* NFT 2 Image */}
-          <div className="relative w-60 h-60 z-10 translate-y-[200px] translate-x-[-50px]">
+          <div className="flex flex-wrap justify-center items-center p-4">
+            {/* SVGs around NFT 2 */}
             <Image
-              src={Art03}
-              alt="NFT 3"
-              layout="fill"
-              objectFit="cover"
-              className="shadow-lg rounded-lg"
+              src={Star01}
+              alt="Star 1"
+              width={55}
+              height={55}
+              className="ml-auto translate-y-[150px] translate-x-[-75px]"
             />
+            <Image
+              src={Star03}
+              alt="Star 3"
+              width={55}
+              height={55}
+              className="ml-auto translate-y-[50px] translate-x-[-100px]"
+            />
+
+            {/* NFT 2 Image */}
+            <div className="relative w-60 h-60 z-10 translate-y-[200px] translate-x-[-50px]">
+              <Image
+                src={Art03}
+                alt="NFT 3"
+                layout="fill"
+                objectFit="cover"
+                className="shadow-lg rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
