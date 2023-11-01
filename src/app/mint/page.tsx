@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import { useAccount } from "wagmi";
 import toast from "react-hot-toast";
 import {
@@ -8,20 +8,8 @@ import {
   useContractWrite,
   useWaitForTransaction,
 } from "wagmi";
-import NFTContract from "../../contracts/NFT.json" assert { type: "json" };
-
-const LoadingModal = () => {
-  return (
-    <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center">
-        <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-black"></div>
-        <div className="mt-3 text-gray-700">
-          Wait while your NFT is minted...
-        </div>
-      </div>
-    </div>
-  );
-};
+import LoadingModal from "@/components/LoadingModal";
+import NFTContract from "@/contracts/NFT.json" assert { type: "json" };
 
 function Mint() {
   const { address, isConnected } = useAccount();
@@ -64,14 +52,14 @@ function Mint() {
     if (isSuccess) {
       toast.success("NFT Minted!");
       setTimeout(() => {
-        router.push('/collection');
-      }, 2000); 
+        router.push("/collection");
+      }, 2000);
     }
   }, [isSuccess, router]);
 
   return (
     <>
-      {isLoading && <LoadingModal />}
+      {isLoading && <LoadingModal message="Wait while your NFT is minted..." />}
       <div className="flex flex-col justify-center items-center mt-10">
         <div className="bg-white p-8 rounded-lg shadow-md w-3/4 sm:w-1/2 lg:w-1/3">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
