@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js NFT Minting App
+
+This is a Next.js project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The app allows users to mint NFTs and view their own collection. It is built with TypeScript and uses key packages like Ethers and WAGMI for seamless blockchain interactions.
+
+## About
+
+This application enables users to mint NFTs and view their collections. It incorporates a variety of technologies including TypeScript, Next.js, Ethers V5, and WAGMI 0.12.1 for a robust, user-friendly experience.
 
 ## Getting Started
 
@@ -14,23 +20,39 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Node.js
+- Ethers V5
+- WAGMI 0.12.1
+- Rainbowkit 0.12.1
 
-## Learn More
+Please ensure you have the above prerequisites installed. To interact with the blockchain, you'll need to have the following environment variables set up:
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_ALCHEMY_ID
+NEXT_PUBLIC_CONTRACT_ADDRESS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## TypeScript in the Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The project leverages TypeScript for better type safety and code maintainability. The strict typing helps catch errors early in the development process, making the codebase more robust.
+
+## Pages
+
+- `/app/mint/page.tsx`: This is the mint page where users can perform simple minting operations. The UI prompts users to connect their wallet if it is not connected when attempting to mint.
+- `/app/collection/page.tsx`: This is the collection page where users can view their NFTs. The UI prompts users to connect their wallet if it is not connect when viewing their collection.
+
+## User Experience
+
+To ensure a smooth user experience, the application incorporates loading states during various operations. When a user is in the process of minting an NFT, a loader appears on the screen to indicate that the process is ongoing.
+
+## Mobile Compatibility
+
+The app is designed to be responsive and provides a seamless experience on both desktop and mobile devices. 
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For deployment, use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme). 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For more detailed instructions, refer to the [Next.js deployment documentation](https://nextjs.org/docs/deployment).

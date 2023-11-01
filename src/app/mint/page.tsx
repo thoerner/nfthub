@@ -28,12 +28,7 @@ function Mint() {
   });
 
   const handleMintClick = () => {
-    if (!isConnected) {
-      toast.error("Please connect your wallet.");
-      return;
-    }
-
-    if (!address) {
+    if (!isConnected || !address) {
       toast.error("Please connect your wallet.");
       return;
     }
