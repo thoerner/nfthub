@@ -32,6 +32,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 Please ensure you have the above prerequisites installed. To interact with the blockchain, you'll need to have the following environment variables set up:
 
 NEXT_PUBLIC_ALCHEMY_ID
+
 NEXT_PUBLIC_CONTRACT_ADDRESS
 
 ## TypeScript in the Project
