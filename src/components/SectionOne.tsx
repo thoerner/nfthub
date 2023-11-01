@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import Art01 from "../assets/art_01.png";
-import Art03 from "../assets/art_03.png";
-import Circle01 from "../assets/circle-01.svg";
-import Circle02 from "../assets/circle-02.svg";
-import Star01 from "../assets/star-01.svg";
-import Star02 from "../assets/star-02.svg";
-import Star03 from "../assets/star-03.svg";
-import SquareRound from "../assets/square-round.svg";
+import Art01 from "@/assets/art_01.png";
+import Art03 from "@/assets/art_03.png";
+import Circle01 from "@/assets/circle-01.svg";
+import Circle02 from "@/assets/circle-02.svg";
+import Star01 from "@/assets/star-01.svg";
+import Star02 from "@/assets/star-02.svg";
+import Star03 from "@/assets/star-03.svg";
+import SquareRound from "@/assets/square-round.svg";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const SectionOne = () => {

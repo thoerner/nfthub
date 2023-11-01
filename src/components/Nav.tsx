@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../assets/logo.svg";
+import Logo from "@/assets/logo.svg";
 import {
   FaTwitter,
   FaDiscord,

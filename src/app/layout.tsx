@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { RainbowKitProvider, WagmiConfig, client, chains } from "../lib/wagmi";
 import { Toaster } from "react-hot-toast";
-import ClientLayout from "./layouts/clientLayout";
+import ClientLayout from "../layouts/clientLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 

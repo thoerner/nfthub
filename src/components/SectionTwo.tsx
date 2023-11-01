@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import Vector from "../assets/Vector.svg";
-import Wallets from "../assets/wallets.png";
-import Heading2 from "../assets/Heading_2.png";
-import Collection from "../assets/collection.png";
+import Vector from "@/assets/Vector.svg";
+import Wallets from "@/assets/wallets.png";
+import Heading2 from "@/assets/Heading_2.png";
+import Collection from "@/assets/collection.png";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const SectionOne = () => {
