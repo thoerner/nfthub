@@ -12,7 +12,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 const SectionOne = () => {
   return (
-    <section className="flex w-full max-w-5xl justify-between mb-24">
+    <section className="flex w-full max-w-5xl justify-between md:translate-y-[150px] mb-24 md:mb-[200px]">
       {/* Left */}
       <div className="flex flex-col space-y-8">
         <div className="text-left">
