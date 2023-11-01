@@ -14,6 +14,14 @@ import Image12 from "@/assets/tokens/12.jpg";
 import Image13 from "@/assets/tokens/13.jpg";
 import Image14 from "@/assets/tokens/14.jpg";
 import Image15 from "@/assets/tokens/15.jpg";
+import Image16 from "@/assets/tokens/16.jpg";
+import Image17 from "@/assets/tokens/17.jpg";
+import Image18 from "@/assets/tokens/18.jpg";
+import Image19 from "@/assets/tokens/19.jpg";
+import Image20 from "@/assets/tokens/20.jpg";
+import Image21 from "@/assets/tokens/21.jpg";
+import Image22 from "@/assets/tokens/22.jpg";
+import Image23 from "@/assets/tokens/23.jpg";
 
 const images = [
   Image0,
@@ -32,6 +40,14 @@ const images = [
   Image13,
   Image14,
   Image15,
+  Image16,
+  Image17,
+  Image18,
+  Image19,
+  Image20,
+  Image21,
+  Image22,
+  Image23,
 ];
 
 export { images };
