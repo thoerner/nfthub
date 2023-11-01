@@ -12,13 +12,13 @@ const NFTGrid = ({ tokens }: { tokens: number[] }) => {
       {tokens.map((token) => (
         <div
           key={token}
-          className="bg-gray-100 border-2 border-gray-200 rounded-lg p-3"
+          className="bg-gray-100 border-2 border-gray-200 rounded-lg p-1 md:p-3"
         >
           <div className="text-center">
             <Image src={images[token]} alt="NFT" width={200} />
           </div>
           <div className="text-center mt-2">
-            <span className="text-lg text-black font-semibold">
+            <span className="text-sm sm:text-base md:text-lg text-black font-semibold">
               NFT #{token}
             </span>
           </div>
