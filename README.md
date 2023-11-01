@@ -31,9 +31,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Please ensure you have the above prerequisites installed. To interact with the blockchain, you'll need to have the following environment variables set up:
 
-NEXT_PUBLIC_ALCHEMY_ID
-
-NEXT_PUBLIC_CONTRACT_ADDRESS
+NEXT_PUBLIC_ALCHEMY_ID   
+NEXT_PUBLIC_CONTRACT_ADDRESS   
 
 ## TypeScript in the Project
 
@@ -41,6 +40,7 @@ The project leverages TypeScript for better type safety and code maintainability
 
 ## Pages
 
+- `/app/page.tsx`: This is the landing page, designed according to the Figma sketch that was shared.
 - `/app/mint/page.tsx`: This is the mint page where users can perform simple minting operations. The UI prompts users to connect their wallet if it is not connected when attempting to mint.
 - `/app/collection/page.tsx`: This is the collection page where users can view their NFTs. The UI prompts users to connect their wallet if it is not connect when viewing their collection.
 
