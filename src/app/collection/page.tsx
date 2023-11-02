@@ -10,14 +10,14 @@ const NFTGrid = ({ tokens }: { tokens: number[] }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
 
-  const handleClick = (imageSrc) => {
+  const handleClick = (imageSrc: any) => {
     setShowModal(true);
     setSelectedImage(imageSrc);
   };
 
   const closeModal = () => {
     setShowModal(false);
-    setSelectedImage(null);
+    setSelectedImage("");
   };
 
   return (
