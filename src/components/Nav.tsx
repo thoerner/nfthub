@@ -47,7 +47,7 @@ const Nav = () => {
         <Image src={Logo} alt="logo" className="w-28 mr-2" />
         <ConnectButton />
       </div>
-      <div className="sm:hidden">
+      <div className="sm:hidden z-20">
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
             <FaTimes className="text-white" size={24} />
@@ -56,15 +56,22 @@ const Nav = () => {
           )}
         </button>
       </div>
+      {/* shaded overlay */}
       <div
-        className={`fixed top-0 left-0 w-64 h-full bg-gray-900 transform transition-transform ease-in-out duration-300 ${
+        className={`fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 z-10 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } sm:hidden`}
+        onClick={() => setIsOpen(false)}
+      />
+      <div
+        className={`fixed top-0 left-0 w-64 h-full bg-gray-900 transform transition-transform ease-in-out duration-300 z-20 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } sm:hidden`}
       >
         <div className="py-6 pr-6 pl-8 space-y-4">
           {links.map(({ href, label }) => (
             <Link href={href} key={`${href}${label}`}>
-              <span className="text-white hover:text-gray-400 block">
+              <span className="text-white text-3xl hover:text-gray-400 block mb-5">
                 {label}
               </span>
             </Link>
