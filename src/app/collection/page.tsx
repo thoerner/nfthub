@@ -7,12 +7,26 @@ import NFTContract from "../../contracts/NFT.json" assert { type: "json" };
 import { images } from "../../lib/images";
 
 const NFTGrid = ({ tokens }: { tokens: number[] }) => {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const handleClick = (imageSrc) => {
+    setShowModal(true);
+    setSelectedImage(imageSrc);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedImage(null);
+  };
+
   return (
     <div className="grid grid-cols-3 gap-4 mt-5">
       {tokens.map((token) => (
         <div
           key={token}
           className="bg-gray-100 border-2 border-gray-200 rounded-lg p-1 md:p-3"
+          onClick={() => handleClick(images[token])}
         >
           <div className="text-center">
             <Image src={images[token]} alt="NFT" width={200} />
@@ -24,6 +38,20 @@ const NFTGrid = ({ tokens }: { tokens: number[] }) => {
           </div>
         </div>
       ))}
+
+      {showModal && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50"
+          onClick={closeModal}
+        >
+          <div className="bg-white p-4 rounded">
+            <button onClick={closeModal}>Close</button>
+            {selectedImage && (
+              <Image src={selectedImage} alt="Full-size NFT" width={600} />
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -64,14 +92,14 @@ function Collection() {
   return (
     <div className="flex flex-col w-full justify-center items-center p-5">
       <div className="text-2xl font-semibold text-center">
-        {isClient && ( 
-          !isConnected ? "Please connect your wallet to view your collection." : (
+        {isClient &&
+          (!isConnected ? (
+            "Please connect your wallet to view your collection."
+          ) : (
             <>
-              You have {tokens.length} NFTs in your wallet!
               <NFTGrid tokens={tokens} />
             </>
-          )
-        )}
+          ))}
       </div>
     </div>
   );
