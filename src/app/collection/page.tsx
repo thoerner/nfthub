@@ -25,7 +25,7 @@ const NFTGrid = ({ tokens }: { tokens: number[] }) => {
       {tokens.map((token) => (
         <div
           key={token}
-          className="bg-gray-100 border-2 border-gray-200 rounded-lg p-1 md:p-3"
+          className="bg-gray-100 border-2 border-gray-200 rounded-lg p-1 md:p-3 cursor-pointer"
           onClick={() => handleClick(images[token])}
         >
           <div className="text-center">
@@ -45,7 +45,6 @@ const NFTGrid = ({ tokens }: { tokens: number[] }) => {
           onClick={closeModal}
         >
           <div className="bg-white p-4 rounded">
-            <button onClick={closeModal}>Close</button>
             {selectedImage && (
               <Image src={selectedImage} alt="Full-size NFT" width={600} />
             )}
