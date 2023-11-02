@@ -1,23 +1,23 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useAccount } from "wagmi";
 import { readContract } from "@wagmi/core";
-import NFTContract from "../../contracts/NFT.json" assert { type: "json" };
-import { images } from "../../lib/images";
+import NFTContract from "@/contracts/NFT.json" assert { type: "json" };
+import { images } from "@/lib/images";
 
 const NFTGrid = ({ tokens }: { tokens: number[] }) => {
   const [showModal, setShowModal] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null);
 
-  const handleClick = (imageSrc: any) => {
+  const handleClick = (imageSrc: StaticImageData) => {
     setShowModal(true);
     setSelectedImage(imageSrc);
   };
 
   const closeModal = () => {
     setShowModal(false);
-    setSelectedImage("");
+    setSelectedImage(null);
   };
 
   return (
